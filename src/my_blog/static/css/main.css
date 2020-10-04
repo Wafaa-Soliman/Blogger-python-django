@@ -4,7 +4,15 @@
          local('Tajawal');
 }
 
+html, body{
+    direction: rtl;
+    text-align: right;
+}
 body{
     font-family: 'Tajawal', sans-serif;
     color: aqua;
+}
+
+.dropdown-menu .dropdown-item{
+    text-align: right;
 }
