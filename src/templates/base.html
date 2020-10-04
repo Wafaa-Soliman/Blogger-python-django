@@ -14,7 +14,42 @@
 </head>
 <body>
 {% include 'partials/_navbar.html' %}
-{%block content%}{% endblock %}
+
+
+
+<section>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-md-8">
+          {%block content%}
+          
+          {% endblock %}</div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <h3 class="text-center bg-secondary text-light">آخر التدوينات</h3>
+            <ul>
+              <li><a href="#">التدوينة الأولي</a></li>
+              <li><a href="#">التدوينة الثانية</a></li>
+              <li><a href="#">التدوينة الثالثة</a></li>
+              <li><a href="#">التدوينة الرابعة</a></li>
+              <li><a href="#">التدوينة الخامسة</a></li>
+            </ul>
+          </div>
+          <div class="card mb-3">
+            <h3 class="text-center bg-secondary text-light">آخر التعليقات</h3>
+            <ul>
+              <li><a href="#">التعليق الأول</a></li>
+              <li><a href="#">التعليق الثاني</a></li>
+              <li><a href="#">التعليق الثالث</a></li>
+              <li><a href="#">التعليق الرابع</a></li>
+              <li><a href="#">التعليق الخامس</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 {% include 'partials/_footer.html' %}
 <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
 <script src="{% static 'js/popper.min.js' %}"></script>

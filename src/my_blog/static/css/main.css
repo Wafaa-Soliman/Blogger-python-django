@@ -10,7 +10,14 @@ html, body{
 }
 body{
     font-family: 'Tajawal', sans-serif;
-    color: aqua;
+}
+
+.bg-secondary{
+    background-color: #666 !important;
+}
+
+.bg-light{
+    background-color: #ccc !important;
 }
 
 .dropdown-menu .dropdown-item{
