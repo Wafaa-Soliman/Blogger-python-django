@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-
+from  .models import Post
 # Create your views here.
 posts=[
     {
@@ -37,7 +37,7 @@ posts=[
 def home(request):
     context = {
         'title': 'الصفحة الرئيسية',
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request,'blog/index.html', context)
 
