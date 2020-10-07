@@ -38,3 +38,10 @@ body{
     padding-bottom: 0;
 }
 /* End sidebar */
+
+/* start comments */
+.comment{
+    background-color:  #f8f8f8;
+    border: 1px dashed #CCC;
+}
+/* End comments */
