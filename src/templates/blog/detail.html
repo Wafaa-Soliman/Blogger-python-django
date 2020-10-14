@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load crispy_forms_tags %}
     <div class="border p-3 mb-3">
         <img src="{% static 'images/person.png' %}" alt="صورة الناشر" width="70px"/>
         <span class="text-secondary">{{post.post_date|date:'D d-m-Y'}}</span>
@@ -20,10 +21,12 @@
     {% endfor %}
 
     <h3 class="border-bottom pb-3 mb-3 mt-5">إضافة تعليق جديد</h3>
-    <form method="POST">
-       {% csrf_token %} <!-- Tag to protect and secure form -->
-       {{comment_form.as_p}}<!-- To invoke form ,,will render them wrapped in <p> tags-->
-        <input class="btn btn-secondary mb-4" type="submit" name="" value="نشر التعليق">
-    </form>
+    <div class="border p-3 mb-5 mt-5">
+        <form method="POST">
+            {% csrf_token %} <!-- Tag to protect and secure form -->
+            {{comment_form|crispy}}<!-- To invoke form ,,will render them wrapped in <p> tags-->
+             <input class="btn btn-secondary mb-4" type="submit" name="" value="نشر التعليق">
+         </form>
+    </div>
 
 {% endblock %}
